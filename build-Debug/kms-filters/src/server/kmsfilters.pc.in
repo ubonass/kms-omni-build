@@ -1,0 +1,14 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: kmsfilters
+Description: Kurento filters Module
+Version: 6.10.0
+URL:
+Requires: kmscore  kmselements  @requires@
+Requires.private:
+Libs: -L${libdir} -lkmsfiltersimpl
+Libs.private:
+CFlags: -I${includedir}

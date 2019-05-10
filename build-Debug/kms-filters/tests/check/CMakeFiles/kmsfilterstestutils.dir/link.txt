@@ -1,0 +1,2 @@
+/usr/bin/ar qc libkmsfilterstestutils.a  CMakeFiles/kmsfilterstestutils.dir/kmstestutils.c.o
+/usr/bin/ranlib libkmsfilterstestutils.a

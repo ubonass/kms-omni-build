@@ -1,0 +1,2 @@
+/usr/bin/ar qc libwebsocketTransport.a  CMakeFiles/websocketTransport.dir/WebSocketTransport.cpp.o CMakeFiles/websocketTransport.dir/WebSocketTransportFactory.cpp.o CMakeFiles/websocketTransport.dir/WebSocketEventHandler.cpp.o CMakeFiles/websocketTransport.dir/WebSocketRegistrar.cpp.o
+/usr/bin/ranlib libwebsocketTransport.a

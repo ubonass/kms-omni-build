@@ -1,0 +1,18 @@
+Performing C SOURCE FILE Test SanBlist_FLAG_DETECTED failed with the following output:
+Change Dir: /root/workSpace/kms-omni-build/build-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4a65b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4a65b.dir/build.make CMakeFiles/cmTC_4a65b.dir/build
+make[1]: Entering directory '/root/workSpace/kms-omni-build/build-Debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4a65b.dir/src.c.o
+/usr/bin/cc    -DSanBlist_FLAG_DETECTED -fsanitize-blacklist=/root/workSpace/kms-omni-build/bin/sanitizers/blacklist.txt   -fsanitize-blacklist=/root/workSpace/kms-omni-build/bin/sanitizers/blacklist.txt -o CMakeFiles/cmTC_4a65b.dir/src.c.o   -c /root/workSpace/kms-omni-build/build-Debug/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option '-fsanitize-blacklist=/root/workSpace/kms-omni-build/bin/sanitizers/blacklist.txt'
+cc: error: unrecognized command line option '-fsanitize-blacklist=/root/workSpace/kms-omni-build/bin/sanitizers/blacklist.txt'
+CMakeFiles/cmTC_4a65b.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_4a65b.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_4a65b.dir/src.c.o] Error 1
+make[1]: Leaving directory '/root/workSpace/kms-omni-build/build-Debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4a65b/fast' failed
+make: *** [cmTC_4a65b/fast] Error 2
+
+Source file was:
+int main(void) { return 0; }

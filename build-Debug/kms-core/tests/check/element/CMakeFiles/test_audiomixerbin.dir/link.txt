@@ -1,0 +1,1 @@
+/usr/bin/cc     -std=gnu11   -Wall -pthread     -DHAVE_CONFIG_H -g   -Werror -O0   -pie CMakeFiles/test_audiomixerbin.dir/audiomixerbin.c.o  -o test_audiomixerbin -rdynamic -lgstreamer-1.5 -lgobject-2.0 -lglib-2.0 -lgstcheck-1.5 -lm -lgstreamer-1.5 -lgobject-2.0 -lglib-2.0 -lgstcheck-1.5 -lm 

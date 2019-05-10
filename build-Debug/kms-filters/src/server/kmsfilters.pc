@@ -1,0 +1,14 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/kurento/modules/filters
+
+Name: kmsfilters
+Description: Kurento filters Module
+Version: 6.10.0
+URL:
+Requires: kmscore  kmselements  opencv
+Requires.private:
+Libs: -L${libdir} -lkmsfiltersimpl
+Libs.private:
+CFlags: -I${includedir}

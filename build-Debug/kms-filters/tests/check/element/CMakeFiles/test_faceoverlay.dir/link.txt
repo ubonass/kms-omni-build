@@ -1,0 +1,1 @@
+/usr/bin/cc     -std=gnu11   -Wall -pthread     -DHAVE_CONFIG_H -g   -Werror -O0   -pie CMakeFiles/test_faceoverlay.dir/faceoverlay.c.o  -o test_faceoverlay -rdynamic -lgstcheck-1.5 -lm -lgstreamer-1.5 -lgobject-2.0 -lglib-2.0 ../libkmsfilterstestutils.a -lgstbase-1.5 -lgstsdp-1.5 -lgstpbutils-1.5 -lgstreamer-1.5 -lgobject-2.0 -lglib-2.0 

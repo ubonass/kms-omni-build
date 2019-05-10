@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -std=gnu++11 -Wall -pthread   -g -Werror -O0   -shared -Wl,-soname,libjsonrpc.so.6 -o libjsonrpc.so.6.10.0 CMakeFiles/jsonrpc.dir/JsonRpcHandler.cpp.o CMakeFiles/jsonrpc.dir/JsonRpcClient.cpp.o CMakeFiles/jsonrpc.dir/JsonRpcUtils.cpp.o CMakeFiles/jsonrpc.dir/JsonFixes.cpp.o -lkmsjsoncpp -lboost_unit_test_framework 

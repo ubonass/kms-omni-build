@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=gnu++11 -Wall -pthread   -g -Werror -O0   -pie CMakeFiles/test_serialize.dir/TestSerialize.cpp.o  -o test_serialize -rdynamic ../src/libjsonrpc.so.6.10.0 -lkmsjsoncpp -lboost_unit_test_framework -Wl,-rpath,/root/workSpace/kms-omni-build/build-Debug/kms-jsonrpc/src 

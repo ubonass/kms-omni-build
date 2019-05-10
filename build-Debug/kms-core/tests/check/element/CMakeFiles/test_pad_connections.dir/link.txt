@@ -1,0 +1,1 @@
+/usr/bin/cc     -std=gnu11   -Wall -pthread     -DHAVE_CONFIG_H -g   -Werror -O0   -pie CMakeFiles/test_pad_connections.dir/pad_connections.c.o  -o test_pad_connections -rdynamic -lgstreamer-1.5 -lgobject-2.0 -lglib-2.0 -lgstcheck-1.5 -lm -lgstreamer-1.5 -lgobject-2.0 -lglib-2.0 -lgstcheck-1.5 -lm 
