@@ -1884,6 +1884,7 @@ kms_element_class_init (KmsElementClass * klass)
       GST_DEBUG_FUNCPTR (kms_element_request_new_sink_pad_default);
   klass->release_requested_sink_pad =
       GST_DEBUG_FUNCPTR (kms_element_release_requested_sink_pad_default);
+  GST_INFO ("@@@@@@@@@@@@@kms_element_init@@@@@@@@@@@@@");
 
   /* set actions */
   element_signals[REQUEST_NEW_SRCPAD] =
@@ -1954,6 +1955,7 @@ static void
 kms_element_init (KmsElement * element)
 {
   g_rec_mutex_init (&element->mutex);
+  GST_INFO ("@@@@@@@@@@@@@kms_element_init@@@@@@@@@@@@@");
 
   element->priv = KMS_ELEMENT_GET_PRIVATE (element);
 
