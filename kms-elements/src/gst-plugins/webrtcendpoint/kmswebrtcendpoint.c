@@ -653,9 +653,6 @@ kms_webrtc_endpoint_class_init (KmsWebrtcEndpointClass * klass)
   KmsElementClass *kmselement_class;
   KmsBaseSdpEndpointClass *base_sdp_endpoint_class;
 
-  GST_INFO ("@@@@@@@@@@@@@kms_webrtc_endpoint_class_init@@@@@@@@@@@@@");
-
-
   gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->set_property = kms_webrtc_endpoint_set_property;
   gobject_class->get_property = kms_webrtc_endpoint_get_property;
@@ -671,6 +668,8 @@ kms_webrtc_endpoint_class_init (KmsWebrtcEndpointClass * klass)
       "WebRTC Endpoint element", "Miguel París Díaz <mparisdiaz@gmail.com>");
 
   GST_DEBUG_CATEGORY_INIT (GST_CAT_DEFAULT, PLUGIN_NAME, 0, PLUGIN_NAME);
+
+  GST_INFO ("@@@@@@@@@@@@@kms_webrtc_endpoint_class_init@@@@@@@@@@@@@");
 
   base_sdp_endpoint_class = KMS_BASE_SDP_ENDPOINT_CLASS (klass);
   base_sdp_endpoint_class->create_session_internal =
