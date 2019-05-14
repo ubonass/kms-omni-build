@@ -586,8 +586,10 @@ MediaElementImpl::MediaElementImpl (const boost::property_tree::ptree &config,
   std::shared_ptr<MediaPipelineImpl> pipe;
 
   pipe = std::dynamic_pointer_cast<MediaPipelineImpl> (getMediaPipeline() );
+  GST_INFO ("@@@@@@@@@@@@@MediaElementImpl@@@@@@@@@@@@@");
 
   element = gst_element_factory_make(factoryName.c_str(), nullptr);
+  GST_INFO ("~~~@@@@@@@@@@@@@MediaElementImpl~~~~@@@@@@@@@@@@@");
 
   if (element == nullptr) {
     throw KurentoException (MEDIA_OBJECT_NOT_AVAILABLE,
