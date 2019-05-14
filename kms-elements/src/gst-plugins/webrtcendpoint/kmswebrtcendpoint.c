@@ -653,6 +653,9 @@ kms_webrtc_endpoint_class_init (KmsWebrtcEndpointClass * klass)
   KmsElementClass *kmselement_class;
   KmsBaseSdpEndpointClass *base_sdp_endpoint_class;
 
+  GST_INFO ("@@@@@@@@@@@@@kms_webrtc_endpoint_class_init@@@@@@@@@@@@@");
+
+
   gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->set_property = kms_webrtc_endpoint_set_property;
   gobject_class->get_property = kms_webrtc_endpoint_get_property;
@@ -839,6 +842,8 @@ kms_webrtc_endpoint_class_init (KmsWebrtcEndpointClass * klass)
 static void
 kms_webrtc_endpoint_init (KmsWebrtcEndpoint * self)
 {
+  GST_INFO ("@@@@@@@@@@@@@kms_webrtc_endpoint_init@@@@@@@@@@@@@");
+
   /* TODO: check which prop should be moved to session */
   g_object_set (G_OBJECT (self), "bundle", TRUE, "rtcp-mux", TRUE, "rtcp-nack",
       TRUE, "rtcp-remb", TRUE, NULL);
