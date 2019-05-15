@@ -929,7 +929,7 @@ kms_base_sdp_endpoint_class_init (KmsBaseSdpEndpointClass * klass)
   klass->process_answer = kms_base_sdp_endpoint_process_answer;
   klass->get_local_sdp = kms_base_sdp_endpoint_get_local_sdp;
   klass->get_remote_sdp = kms_base_sdp_endpoint_get_remote_sdp;
-  GST_INFO ("@@@@@@@@@@@@@%s@@@@@@@@@@@@@",__func__);
+  GST_INFO ("@@@@@@@@@@@@@kms_base_sdp_endpoint_class_init@@@@@@@@@@@@@");
 
   /* Signals initialization */
   kms_base_sdp_endpoint_signals[SIGNAL_CREATE_SESSION] =
@@ -1052,7 +1052,6 @@ static void
 kms_base_sdp_endpoint_init (KmsBaseSdpEndpoint * self)
 {
   self->priv = KMS_BASE_SDP_ENDPOINT_GET_PRIVATE (self);
-  GST_INFO ("@@@@@@@@@@@@@%s@@@@@@@@@@@@@",__func__);
 
   self->priv->multisession = DEFAULT_MULTISESSION;
   self->priv->bundle = DEFAULT_BUNDLE;
@@ -1064,6 +1063,8 @@ kms_base_sdp_endpoint_init (KmsBaseSdpEndpoint * self)
 
   self->priv->max_video_recv_bw = MAX_VIDEO_RECV_BW_DEFAULT;
   self->priv->max_audio_recv_bw = MAX_AUDIO_RECV_BW_DEFAULT;
+  
+  GST_INFO ("@@@@@@@@@@@@@kms_base_sdp_endpoint_init@@@@@@@@@@@@@");
 }
 
 GHashTable *

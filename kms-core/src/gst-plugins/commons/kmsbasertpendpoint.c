@@ -2856,7 +2856,7 @@ kms_base_rtp_endpoint_class_init (KmsBaseRtpEndpointClass * klass)
       "José Antonio Santos Cadenas <santoscadenas@kurento.com>");
 
   GST_DEBUG_CATEGORY_INIT (GST_CAT_DEFAULT, PLUGIN_NAME, 0, PLUGIN_NAME);
-  GST_INFO ("@@@@@@@@@@@@@%s@@@@@@@@@@@@@",__func__);
+  GST_INFO ("@@@@@@@@@@@@@kms_base_rtp_endpoint_class_init@@@@@@@@@@@@@");
 
   klass->get_connection_state = kms_base_rtp_endpoint_get_connection_state;
   klass->request_local_key_frame =
@@ -3379,7 +3379,7 @@ kms_base_rtp_endpoint_init (KmsBaseRtpEndpoint * self)
 
   self->priv->rtpbin = gst_element_factory_make ("rtpbin", NULL);
 
-  GST_INFO ("@@@@@@@@@@@@@%s@@@@@@@@@@@@@",__func__);
+  GST_INFO ("@@@@@@@@@@@@@kms_base_rtp_endpoint_init@@@@@@@@@@@@@");
 
 
   g_signal_connect (self->priv->rtpbin, "request-pt-map",
