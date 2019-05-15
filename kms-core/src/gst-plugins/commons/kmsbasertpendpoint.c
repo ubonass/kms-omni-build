@@ -2856,6 +2856,7 @@ kms_base_rtp_endpoint_class_init (KmsBaseRtpEndpointClass * klass)
       "José Antonio Santos Cadenas <santoscadenas@kurento.com>");
 
   GST_DEBUG_CATEGORY_INIT (GST_CAT_DEFAULT, PLUGIN_NAME, 0, PLUGIN_NAME);
+  GST_INFO ("@@@@@@@@@@@@@%s@@@@@@@@@@@@@",__func__);
 
   klass->get_connection_state = kms_base_rtp_endpoint_get_connection_state;
   klass->request_local_key_frame =
@@ -3377,6 +3378,9 @@ kms_base_rtp_endpoint_init (KmsBaseRtpEndpoint * self)
   self->priv->max_video_send_bw = MAX_VIDEO_SEND_BW_DEFAULT;
 
   self->priv->rtpbin = gst_element_factory_make ("rtpbin", NULL);
+
+  GST_INFO ("@@@@@@@@@@@@@%s@@@@@@@@@@@@@",__func__);
+
 
   g_signal_connect (self->priv->rtpbin, "request-pt-map",
       G_CALLBACK (kms_base_rtp_endpoint_rtpbin_request_pt_map), self);

@@ -929,6 +929,7 @@ kms_base_sdp_endpoint_class_init (KmsBaseSdpEndpointClass * klass)
   klass->process_answer = kms_base_sdp_endpoint_process_answer;
   klass->get_local_sdp = kms_base_sdp_endpoint_get_local_sdp;
   klass->get_remote_sdp = kms_base_sdp_endpoint_get_remote_sdp;
+  GST_INFO ("@@@@@@@@@@@@@%s@@@@@@@@@@@@@",__func__);
 
   /* Signals initialization */
   kms_base_sdp_endpoint_signals[SIGNAL_CREATE_SESSION] =
@@ -1051,6 +1052,7 @@ static void
 kms_base_sdp_endpoint_init (KmsBaseSdpEndpoint * self)
 {
   self->priv = KMS_BASE_SDP_ENDPOINT_GET_PRIVATE (self);
+  GST_INFO ("@@@@@@@@@@@@@%s@@@@@@@@@@@@@",__func__);
 
   self->priv->multisession = DEFAULT_MULTISESSION;
   self->priv->bundle = DEFAULT_BUNDLE;

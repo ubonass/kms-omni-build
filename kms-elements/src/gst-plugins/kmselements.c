@@ -29,6 +29,9 @@
 static gboolean
 kurento_init (GstPlugin * kurento)
 {
+
+  GST_INFO ("@@@@@@@@@@@@@Kurento Elements@kurento_init@@@@@@@@@@@@@");
+
   if (!kms_http_endpoint_plugin_init (kurento)) {
     return FALSE;
   }
