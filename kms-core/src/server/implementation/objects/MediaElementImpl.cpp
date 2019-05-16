@@ -906,7 +906,7 @@ void MediaElementImpl::connect (std::shared_ptr<MediaElement> sink,
   connections = sink->getSourceConnections (mediaType, sinkMediaDescription);
 
   if (!connections.empty () ) {
-  	GST_INFO("~~~~~~~~~~~~~~~~~~")
+  	GST_INFO("~~~~~~~~~~~~~~~~~~");
     std::shared_ptr <ElementConnectionData> connection = connections.at (0);
     connection->getSource()->disconnect (connection->getSink (), mediaType,
                                          sourceMediaDescription,
