@@ -571,7 +571,8 @@ ServerMethods::invoke (const Json::Value &params, Json::Value &response)
   //add by jeffrey for debug
   Json::FastWriter fastWriter;
   std::string output = fastWriter.write(params);
-  GST_INFO ("@@@@params: %s",output.c_str ());
+  GST_INFO ("params: %s",output.c_str ());
+  //add by jeffrey for debug
 
   //debug by jeffrey
   /*GST_INFO ("@@@@params: %s",
@@ -648,6 +649,11 @@ ServerMethods::create (const Json::Value &params,
   std::string sessionId;
 
   requireParams (params);
+  //add by jeffrey for debug
+  Json::FastWriter fastWriter;
+  std::string output = fastWriter.write(params);
+  GST_INFO ("params: %s",output.c_str ());
+  //add by jeffrey for debug
 
   JsonRpc::getValue (params, TYPE, type);
 
