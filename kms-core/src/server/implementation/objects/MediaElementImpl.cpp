@@ -898,6 +898,10 @@ void MediaElementImpl::connect (std::shared_ptr<MediaElement> sink,
                                        (shared_from_this () ), sink, mediaType,
                                        sourceMediaDescription,
                                        sinkMediaDescription) );
+  /*Connecting 20c4fcb2-9440-4062-b77a-96942f3e2577_kurento.MediaPipeline/bd2faf1c-d31d-4503-92c1-6877c3aa8186_kurento.RtpEndpoint -> 20c4fcb2-9440-4062-b77a-96942f3e2577_kurento.MediaPipeline/73ce0f7b-fb6b-46ff-8dd4-ad08b45b8b20_kurento.WebRtcEndpoint params AUDIO default default
+  	Connecting 20c4fcb2-9440-4062-b77a-96942f3e2577_kurento.MediaPipeline/bd2faf1c-d31d-4503-92c1-6877c3aa8186_kurento.RtpEndpoint -> 20c4fcb2-9440-4062-b77a-96942f3e2577_kurento.MediaPipeline/73ce0f7b-fb6b-46ff-8dd4-ad08b45b8b20_kurento.WebRtcEndpoint params VIDEO default default
+  	Connecting 20c4fcb2-9440-4062-b77a-96942f3e2577_kurento.MediaPipeline/bd2faf1c-d31d-4503-92c1-6877c3aa8186_kurento.RtpEndpoint -> 20c4fcb2-9440-4062-b77a-96942f3e2577_kurento.MediaPipeline/73ce0f7b-fb6b-46ff-8dd4-ad08b45b8b20_kurento.WebRtcEndpoint params DATA default default
+  */
 
   GST_INFO ("Connecting %s -> %s params %s %s %s", getName().c_str(),
              sink->getName ().c_str (), mediaType->getString ().c_str (),
@@ -927,6 +931,7 @@ void MediaElementImpl::connect (std::shared_ptr<MediaElement> sink,
                             mediaType->getString () + "-" +
                             sourceMediaDescription);
   }
+  GST_INFO ("padName : %s",padName);
 
   connectionData->setSourcePadName (padName);
 
@@ -954,7 +959,7 @@ MediaElementImpl::performConnection (std::shared_ptr
   src = data->getSourcePad ();
 
   if (!src) {
-    GST_LOG ("Still waiting for src pad %s:%s", getName().c_str(),
+    GST_INFO ("Still waiting for src pad %s:%s", getName().c_str(),
              data->getSourcePadName () );
     return;
   }
@@ -964,7 +969,7 @@ MediaElementImpl::performConnection (std::shared_ptr
   if (sink) {
     GstPadLinkReturn ret;
 
-    GST_LOG ("Linking %s:%s -> %s:%s", getName().c_str(),
+    GST_INFO ("Linking %s:%s -> %s:%s", getName().c_str(),
              data->getSourcePadName (), data->getSink()->getName().c_str(),
              data->getSinkPadName ().c_str() );
 
@@ -974,12 +979,12 @@ MediaElementImpl::performConnection (std::shared_ptr
       GST_WARNING ("Cannot link pads: %" GST_PTR_FORMAT " and %" GST_PTR_FORMAT
                    " reason: %s", src, sink, gst_pad_link_get_name (ret) );
     } else {
-      GST_LOG ("Link done");
+      GST_INFO ("Link done");
     }
 
     g_object_unref (sink);
   } else {
-    GST_LOG ("Still waiting for sink pad %s:%s",
+    GST_INFO ("Still waiting for sink pad %s:%s",
              data->getSink()->getName().c_str(),
              data->getSinkPadName ().c_str() );
   }
