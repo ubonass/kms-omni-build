@@ -884,7 +884,7 @@ void MediaElementImpl::connect (std::shared_ptr<MediaElement> sink,
   gchar *padName;
   std::shared_ptr<MediaElementImpl> sinkImpl =
     std::dynamic_pointer_cast<MediaElementImpl> (sink);
-
+ 
   if (sinkImpl->getMediaPipeline ()->getId () != getMediaPipeline ()->getId() ) {
     throw KurentoException (CONNECT_ERROR,
                             "Media elements do not share pipeline");
@@ -899,13 +899,14 @@ void MediaElementImpl::connect (std::shared_ptr<MediaElement> sink,
                                        sourceMediaDescription,
                                        sinkMediaDescription) );
 
-  GST_DEBUG ("Connecting %s -> %s params %s %s %s", getName().c_str(),
+  GST_INFO ("Connecting %s -> %s params %s %s %s", getName().c_str(),
              sink->getName ().c_str (), mediaType->getString ().c_str (),
              sourceMediaDescription.c_str(), sinkMediaDescription.c_str() );
 
   connections = sink->getSourceConnections (mediaType, sinkMediaDescription);
 
   if (!connections.empty () ) {
+  	GST_INFO("~~~~~~~~~~~~~~~~~~")
     std::shared_ptr <ElementConnectionData> connection = connections.at (0);
     connection->getSource()->disconnect (connection->getSink (), mediaType,
                                          sourceMediaDescription,
