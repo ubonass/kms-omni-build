@@ -567,6 +567,10 @@ ServerMethods::invoke (const Json::Value &params, Json::Value &response)
 
   requireParams (params);
 
+  //debug by jeffrey
+  GST_INFO ("params: %s",
+			 params.c_str ());
+
   JsonRpc::getValue (params, "operation", operation);
   JsonRpc::getValue (params, OBJECT, objectId);
 
