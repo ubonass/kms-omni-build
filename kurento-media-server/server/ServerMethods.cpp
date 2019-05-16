@@ -567,6 +567,12 @@ ServerMethods::invoke (const Json::Value &params, Json::Value &response)
 
   requireParams (params);
 
+
+  //add by jeffrey for debug
+  Json::FastWriter fastWriter;
+  std::string output = fastWriter.write(params);
+  GST_INFO ("@@@@params: %s",output.c_str ());
+
   //debug by jeffrey
   /*GST_INFO ("@@@@params: %s",
 			 params.asString().c_str ());*/
