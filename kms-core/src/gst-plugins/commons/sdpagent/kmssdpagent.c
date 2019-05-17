@@ -1721,6 +1721,8 @@ kms_sdp_agent_generate_answer (KmsSdpAgent * agent,
   if (!kms_sdp_agent_set_origin (answer, &o, error)) {
     goto end;
   }
+  //debug by jeffrey 
+  GST_INFO("@@@@answer->origin.addr:%s",answer->origin.addr);
 
   if (!sdp_utils_intersect_session_attributes (offer, intersect_session_attr,
           answer)) {
