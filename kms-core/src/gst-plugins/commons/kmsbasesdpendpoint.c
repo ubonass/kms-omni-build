@@ -268,7 +268,8 @@ kms_base_sdp_endpoint_create_session (KmsBaseSdpEndpoint * self)
 
   g_hash_table_insert (self->priv->sessions, g_strdup (sess->id_str), sess);
 
-  GST_DEBUG_OBJECT (self, "Created session with id '%s'", sess->id_str);
+	//debug by jeffrey
+  GST_INFO_OBJECT (self, "@@@@@Created session with id '%s'", sess->id_str);
   self->priv->configured = TRUE;
   ret = g_strdup (sess->id_str);
 
@@ -339,6 +340,7 @@ kms_base_sdp_endpoint_create_media_handler (KmsBaseSdpEndpoint * self,
   }
 
   if (KMS_IS_SDP_RTP_AVP_MEDIA_HANDLER (*handler)) {
+  	GST_INFO("@@@@@@@@@KMS_IS_SDP_RTP_AVP_MEDIA_HANDLER@@@@@@@@@");
     KmsSdpRtpAvpMediaHandler *h = KMS_SDP_RTP_AVP_MEDIA_HANDLER (*handler);
     GError *err = NULL;
 
