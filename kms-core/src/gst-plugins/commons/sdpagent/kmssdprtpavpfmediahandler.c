@@ -577,7 +577,7 @@ kms_sdp_rtp_avpf_media_handler_class_init (KmsSdpRtpAvpfMediaHandlerClass *
           "Whether Google's Receiver Estimated Maximum Bitrate is supported",
           DEFAULT_SDP_MEDIA_RTP_GOOG_REMB,
           G_PARAM_READWRITE | G_PARAM_CONSTRUCT | G_PARAM_STATIC_STRINGS));
-
+  GST_INFO("@@@@@@@@@@@@@@@@@@@@@@@@@@@");
   g_type_class_add_private (klass, sizeof (KmsSdpRtpAvpfMediaHandlerPrivate));
 }
 
